@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Peliculas } from 'src/app/clases/peliculas';
 
 @Component({
   selector: 'app-tabla-profesor',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabla-profesor.component.css']
 })
 export class TablaProfesorComponent implements OnInit {
+  @Input() listado: Peliculas[];
 
   public headers = ["ID", "Nombre", "Tipo", "Fecha De Estreno", "Cantidad de Publico", "Foto De la Pelicula"];
   public rows = [
